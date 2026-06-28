@@ -11,11 +11,29 @@ This skill routes work to forked upstream skill repositories managed as submodul
 
 ## Required Flow
 
-1. Locate the `research-skills-kit` checkout. If submodules are missing, run `git submodule update --init --recursive --depth 1`.
-2. Pick the upstream and child skill from the routing table below.
-3. Read the child `SKILL.md` completely before acting.
-4. Follow the child skill's relative references, scripts, and assets from inside that upstream repo.
-5. Use local `research-*` skills only as validation/adapters unless the user explicitly asks for the lightweight rewritten flow.
+1. Locate the `research-skills-kit` checkout. If none is available, clone it with submodules.
+2. List or search child skills with `scripts/list_upstream_skills.py` from the checkout, or this skill's bundled helper when only the installed skill is available.
+3. Pick the upstream and child skill from the routing table below.
+4. Read the child `SKILL.md` completely before acting.
+5. Follow the child skill's relative references, scripts, and assets from inside that upstream repo.
+6. Use local `research-*` skills only as validation/adapters unless the user explicitly asks for the lightweight rewritten flow.
+
+## Helper Commands
+
+From a checkout:
+
+```bash
+python3 scripts/list_upstream_skills.py --profile core
+python3 scripts/list_upstream_skills.py --profile all --query citation
+```
+
+From an installed router skill when no checkout exists yet:
+
+```bash
+python3 ~/.codex/skills/research-upstream-router/scripts/list_upstream_skills.py \
+  --clone-to ~/develop/daillyTasks/research-skills-kit \
+  --profile core
+```
 
 ## Routing Table
 

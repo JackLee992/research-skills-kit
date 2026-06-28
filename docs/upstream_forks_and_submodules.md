@@ -45,6 +45,14 @@ python3 scripts/list_upstream_skills.py --profile core
 python3 scripts/list_upstream_skills.py --profile all
 ```
 
+只安装了 `research-upstream-router` skill、还没有完整 checkout 时：
+
+```bash
+python3 ~/.codex/skills/research-upstream-router/scripts/list_upstream_skills.py \
+  --clone-to ~/develop/daillyTasks/research-skills-kit \
+  --profile core
+```
+
 ## 调用方式
 
 当任务需要完整原始能力时，使用 `research-upstream-router`：

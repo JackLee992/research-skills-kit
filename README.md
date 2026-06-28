@@ -48,6 +48,15 @@ Existing checkouts can initialize upstream forks with:
 git submodule update --init --recursive --depth 1
 ```
 
+If only the `research-upstream-router` skill is installed, its bundled helper
+can clone the full kit and list the core upstream skills:
+
+```bash
+python3 "$HOME/.codex/skills/research-upstream-router/scripts/list_upstream_skills.py" \
+  --clone-to "$HOME/develop/daillyTasks/research-skills-kit" \
+  --profile core
+```
+
 See `docs/upstream_forks_and_submodules.md` for the fork map and routing model.
 
 ## Local Smoke Test

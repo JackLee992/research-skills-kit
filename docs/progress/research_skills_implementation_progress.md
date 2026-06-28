@@ -33,7 +33,7 @@
 
 | Skill | 状态 | 来源思路 | 已实现能力 | 验证证据 |
 | --- | --- | --- | --- | --- |
-| `research-upstream-router` | 已落地 | fork + submodule 调用完整上游子 skills | 按任务路由到 K-Dense、Nature、ARS、PaperSpine、Image-to-PPT 子 skills | `quick_validate.py`、`scripts/list_upstream_skills.py --profile core` |
+| `research-upstream-router` | 已落地 | fork + submodule 调用完整上游子 skills | 按任务路由到 K-Dense、Nature、ARS、PaperSpine、Image-to-PPT 子 skills；安装后自带上游清单 helper | `quick_validate.py`、`tests/router_tool_test.py`、`scripts/list_upstream_skills.py --profile core` |
 | `research-eda` | 已落地 | K-Dense `exploratory-data-analysis` | CSV/XLSX 数据体检、缺失值、数值摘要、相关矩阵、分组计数、Markdown 报告 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/penguins_eda_report.md` |
 | `research-statistics` | 已落地 | K-Dense `statistical-analysis` + Stats Sanity 思路 | 正态性、方差齐性、t-test/ANOVA/非参数、效应量、OLS 回归、结果段落 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/penguins_statistical_results.md` |
 | `research-power` | 已落地 | K-Dense `statistical-power` | 样本量、power curve、MDE/功效规划报告 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/power_curve_points.csv` |
