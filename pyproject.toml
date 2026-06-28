@@ -1,0 +1,27 @@
+[project]
+name = "research-skills-kit"
+version = "0.1.0"
+description = "Practical Codex skills for scientific EDA, statistics, power, figures, citations, and result audits."
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "pillow>=10.0",
+  "requests>=2.31",
+  "scipy>=1.11",
+  "seaborn>=0.13",
+  "statsmodels>=0.14",
+  "tabulate>=0.9",
+]
+
+[tool.research-skills-kit]
+skill_paths = [
+  "skills/research-eda",
+  "skills/research-statistics",
+  "skills/research-power",
+  "skills/research-figure",
+  "skills/research-citation-check",
+  "skills/research-results-audit",
+]
+
