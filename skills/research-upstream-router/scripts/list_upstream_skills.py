@@ -109,6 +109,8 @@ def ensure_checkout(args: argparse.Namespace) -> Path:
                     args.repo_url,
                     str(dest),
                 ],
+                stdout=sys.stderr,
+                stderr=sys.stderr,
                 check=True,
             )
         return dest
@@ -126,6 +128,8 @@ def init_submodules(checkout: Path) -> None:
     subprocess.run(
         ["git", "submodule", "update", "--init", "--recursive", "--depth", "1"],
         cwd=checkout,
+        stdout=sys.stderr,
+        stderr=sys.stderr,
         check=True,
     )
 
