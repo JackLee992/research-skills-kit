@@ -1,0 +1,14 @@
+[
+  {
+    "doi": "10.1038/s41586-020-2649-2",
+    "status": "VERIFIED",
+    "title": "Array programming with NumPy",
+    "author": "Harris, Charles R. and Millman, K. Jarrod and van der Walt, St\u00e9fan J. and Gommers, Ralf and Virtanen, Pauli and Cournapeau, David and Wieser, Eric and Taylor, Julian and Berg, Sebastian and Smith, Nathaniel J. and Kern, Robert and Picus, Matti and Hoyer, Stephan and van Kerkwijk, Marten H. and Brett, Matthew and Haldane, Allan and del R\u00edo, Jaime Fern\u00e1ndez and Wiebe, Mark and Peterson, Pearu and G\u00e9rard-Marchant, Pierre and Sheppard, Kevin and Reddy, Tyler and Weckesser, Warren and Abbasi, Hameer and Gohlke, Christoph and Oliphant, Travis E.",
+    "journal": "Nature",
+    "year": "2020",
+    "volume": "585",
+    "number": "7825",
+    "pages": "357-362",
+    "url": "https://doi.org/10.1038/s41586-020-2649-2"
+  }
+]

@@ -1,0 +1,2 @@
+test,statistic,p_value,is_homogeneous,variance_ratio,interpretation,recommendation
+Levene,5.12025099751946,0.006445082805324017,False,1.7204470671366983,"Variances do not appear homogeneous (F = 5.120, p = 0.006, variance ratio = 1.72)",Consider Welch's correction or transformation

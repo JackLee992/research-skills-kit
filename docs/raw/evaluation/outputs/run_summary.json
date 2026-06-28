@@ -1,0 +1,25 @@
+{
+  "dataset_url": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/master/inst/extdata/penguins.csv",
+  "raw_rows": 344,
+  "analysis_rows": 342,
+  "outputs": [
+    "outputs/anova_body_mass_by_species.csv",
+    "outputs/ars_experiment_validation_report.md",
+    "outputs/editppt_runs",
+    "outputs/kdense_eda_analyzer_penguins.md",
+    "outputs/kruskal_body_mass_by_species.csv",
+    "outputs/levene_body_mass_by_species.csv",
+    "outputs/normality_by_species.csv",
+    "outputs/ols_body_mass_model_coefficients.csv",
+    "outputs/penguins_eda_report.md",
+    "outputs/penguins_figure_legend.md",
+    "outputs/penguins_nature_figure.pdf",
+    "outputs/penguins_nature_figure.png",
+    "outputs/penguins_nature_figure.svg",
+    "outputs/penguins_nature_figure.tiff",
+    "outputs/penguins_statistical_results.md",
+    "outputs/power_curve_points.csv",
+    "outputs/run_summary.json",
+    "outputs/tukey_body_mass_by_species.csv"
+  ]
+}

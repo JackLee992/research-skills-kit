@@ -44,6 +44,12 @@ and verifies that key Markdown/CSV/figure outputs exist.
 ## Repository Layout
 
 ```text
+docs/
+  README.md
+  assessment/
+  progress/
+  raw/
+  sources/
 skills/
   research-eda/
   research-statistics/
@@ -57,3 +63,9 @@ tests/
 
 Each skill is self-contained and exposes its main reusable script under
 `skills/<skill>/scripts/`.
+
+## Research Notes And Tracking
+
+The original OpenVideo extraction, GitHub repo mapping, skill evaluation report,
+fork/improvement candidates, implementation progress, and raw evaluation
+artifacts are tracked under `docs/`.

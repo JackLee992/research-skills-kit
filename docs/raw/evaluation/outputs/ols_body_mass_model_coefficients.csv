@@ -1,0 +1,6 @@
+term,estimate,se,t,p
+Intercept,-365.8174,532.0503,-0.6876,0.4922
+C(species)[T.Chinstrap],-87.6345,46.3473,-1.8908,0.0595
+C(species)[T.Gentoo],836.26,85.1854,9.8169,0.0
+C(sex)[T.male],530.3811,37.8101,14.0275,0.0
+flipper_length_mm,20.0249,2.8458,7.0367,0.0
