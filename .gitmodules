@@ -1,0 +1,25 @@
+[submodule "upstreams/scientific-agent-skills"]
+	path = upstreams/scientific-agent-skills
+	url = https://github.com/JackLee992/scientific-agent-skills.git
+	branch = main
+	shallow = true
+[submodule "upstreams/nature-skills"]
+	path = upstreams/nature-skills
+	url = https://github.com/JackLee992/nature-skills.git
+	branch = main
+	shallow = true
+[submodule "upstreams/academic-research-skills-codex"]
+	path = upstreams/academic-research-skills-codex
+	url = https://github.com/JackLee992/academic-research-skills-codex.git
+	branch = main
+	shallow = true
+[submodule "upstreams/PaperSpine"]
+	path = upstreams/PaperSpine
+	url = https://github.com/JackLee992/PaperSpine.git
+	branch = main
+	shallow = true
+[submodule "upstreams/image-to-editable-ppt-skill"]
+	path = upstreams/image-to-editable-ppt-skill
+	url = https://github.com/JackLee992/image-to-editable-ppt-skill.git
+	branch = main
+	shallow = true

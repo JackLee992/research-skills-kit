@@ -2,6 +2,7 @@
 
 Practical Codex skills for everyday research work:
 
+- `research-upstream-router`: route tasks into forked upstream submodule skills.
 - `research-eda`: first-pass data quality and variable profiling.
 - `research-statistics`: assumption-aware statistical tests and manuscript-ready result snippets.
 - `research-power`: sample size, MDE, and power-curve planning.
@@ -20,6 +21,7 @@ From a local checkout:
 python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --repo JackLee992/research-skills-kit \
   --path \
+    skills/research-upstream-router \
     skills/research-eda \
     skills/research-statistics \
     skills/research-power \
@@ -29,6 +31,24 @@ python3 "$HOME/.codex/skills/.system/skill-installer/scripts/install-skill-from-
 ```
 
 Open a new Codex conversation after installation so the skill cache refreshes.
+
+## Full Upstream Mode
+
+For the complete original upstream skill capabilities, use the forked submodules:
+
+```bash
+git clone --recurse-submodules https://github.com/JackLee992/research-skills-kit.git
+cd research-skills-kit
+python3 scripts/list_upstream_skills.py --profile core
+```
+
+Existing checkouts can initialize upstream forks with:
+
+```bash
+git submodule update --init --recursive --depth 1
+```
+
+See `docs/upstream_forks_and_submodules.md` for the fork map and routing model.
 
 ## Local Smoke Test
 
@@ -46,11 +66,13 @@ and verifies that key Markdown/CSV/figure outputs exist.
 ```text
 docs/
   README.md
+  upstream_forks_and_submodules.md
   assessment/
   progress/
   raw/
   sources/
 skills/
+  research-upstream-router/
   research-eda/
   research-statistics/
   research-power/

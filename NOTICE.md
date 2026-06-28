@@ -16,3 +16,6 @@ Design inspirations and compatibility checks came from:
 Scripts in this repository are written as standalone implementations for this
 kit. Keep upstream license files with any future copied source.
 
+Full upstream repositories are managed as Git submodules under `upstreams/`,
+pointing to JackLee992 forks of the original projects. Their own licenses and
+notices remain in those submodules.

@@ -6,7 +6,7 @@
 
 ## 阶段结论
 
-第一阶段已经完成：没有直接 fork 一个庞大的上游仓库，而是按高频科研闭环重写成 6 个轻量 skills。
+第一阶段已经完成并调整架构：上游完整能力通过 fork + submodule 管理，本仓库提供路由 skill 和验证过的本地增强层。
 
 | 阶段 | 状态 | 说明 |
 | --- | --- | --- |
@@ -14,13 +14,26 @@
 | GitHub 仓库确认 | 完成 | 已确认 K-Dense、Nature-skills、Academic Research Skills、PaperSpine、Image to Editable PPT 等仓库。 |
 | 实测评估 | 完成 | 用 Palmer Penguins 数据跑 EDA、统计、power、作图、结果审计。 |
 | Fork / 改造候选分析 | 完成 | P0/P1/P2/P3 候选已整理。 |
-| 第一阶段 kit 落地 | 完成 | 6 个 skills 已实现、验证、提交并推送。 |
-| 本机安装 | 完成 | 6 个 skills 已安装到 `~/.codex/skills`，新会话刷新后可用。 |
+| 上游 fork 创建 | 完成 | 已 fork K-Dense、Nature-skills、Academic Research Skills Codex、PaperSpine、Image to Editable PPT。 |
+| Submodule 管理 | 完成 | `upstreams/` 已指向 JackLee992 名下 fork。 |
+| 第一阶段 kit 落地 | 完成 | 1 个上游路由 skill + 6 个本地增强 skills 已实现、验证、提交并推送。 |
+| 本机安装 | 完成 | 6 个本地增强 skills 已安装到 `~/.codex/skills`；路由 skill 可从本仓库安装。 |
+
+## 上游 Fork / Submodule 状态
+
+| Fork | Submodule path | 当前指针 | 用途 |
+| --- | --- | --- | --- |
+| `JackLee992/scientific-agent-skills` | `upstreams/scientific-agent-skills` | `9c9bd2e` | K-Dense 全量科学 skills，含 EDA、统计、power、可视化、citation。 |
+| `JackLee992/nature-skills` | `upstreams/nature-skills` | `6edea02` | Nature 风格作图、写作、引用、审稿、回复。 |
+| `JackLee992/academic-research-skills-codex` | `upstreams/academic-research-skills-codex` | `36cc610` | Academic Research Suite / experiment validation。 |
+| `JackLee992/PaperSpine` | `upstreams/PaperSpine` | `a7fe540` | PaperSpine 论文结构、改写、引用、LaTeX、审计。 |
+| `JackLee992/image-to-editable-ppt-skill` | `upstreams/image-to-editable-ppt-skill` | `698b16f` | Image to Editable PPT。 |
 
 ## 已落地 Skills
 
 | Skill | 状态 | 来源思路 | 已实现能力 | 验证证据 |
 | --- | --- | --- | --- | --- |
+| `research-upstream-router` | 已落地 | fork + submodule 调用完整上游子 skills | 按任务路由到 K-Dense、Nature、ARS、PaperSpine、Image-to-PPT 子 skills | `quick_validate.py`、`scripts/list_upstream_skills.py --profile core` |
 | `research-eda` | 已落地 | K-Dense `exploratory-data-analysis` | CSV/XLSX 数据体检、缺失值、数值摘要、相关矩阵、分组计数、Markdown 报告 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/penguins_eda_report.md` |
 | `research-statistics` | 已落地 | K-Dense `statistical-analysis` + Stats Sanity 思路 | 正态性、方差齐性、t-test/ANOVA/非参数、效应量、OLS 回归、结果段落 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/penguins_statistical_results.md` |
 | `research-power` | 已落地 | K-Dense `statistical-power` | 样本量、power curve、MDE/功效规划报告 | `tests/smoke_test.py`、`docs/raw/evaluation/outputs/power_curve_points.csv` |

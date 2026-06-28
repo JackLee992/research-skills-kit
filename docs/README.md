@@ -11,6 +11,7 @@
 | `assessment/research_skill_evaluation_report.md` | 用 Palmer Penguins 数据对候选科研 skills 做的实测评估报告。 |
 | `assessment/skill_fork_improvement_candidates.md` | 值得 fork、抽取或重写的候选清单与改造建议。 |
 | `progress/research_skills_implementation_progress.md` | 当前 `research-skills-kit` 的改造进度、已落地技能、后续 backlog。 |
+| `upstream_forks_and_submodules.md` | 上游 fork、submodule、子 skill 路由和同步策略。 |
 | `raw/evaluation/README.md` | 实测输入、脚本和输出产物索引。 |
 | `raw/openvideo/source_manifest.md` | 抖音原始链接、OpenVideo 本地证据路径和素材处理说明。 |
 
@@ -18,14 +19,15 @@
 
 当前仓库已经落地第一阶段高可用闭环：
 
-1. `research-eda`
-2. `research-statistics`
-3. `research-power`
-4. `research-figure`
-5. `research-citation-check`
-6. `research-results-audit`
+1. `research-upstream-router`
+2. `research-eda`
+3. `research-statistics`
+4. `research-power`
+5. `research-figure`
+6. `research-citation-check`
+7. `research-results-audit`
 
-这 6 个 skills 对应的数据分析闭环是：
+这些 skills 对应的数据分析闭环是：
 
 ```text
 数据体检 -> 统计检验/回归 -> 样本量/功效 -> 论文图导出/QA -> 引用核验 -> 结果审计
@@ -34,6 +36,7 @@
 ## 维护原则
 
 - 上游仓库作为 inspiration / compatibility reference，不直接整仓复制。
+- 完整上游能力通过 fork + submodule 保留在 `upstreams/`，由 `research-upstream-router` 调用子 skills。
 - MIT / Apache 来源可以按 license 兼容策略复用小片段；CC BY-NC 来源只借鉴思想，公开仓库内重写实现。
 - 每个新增 skill 必须有 `SKILL.md`、可运行脚本或明确操作流程、至少一个 smoke test。
 - 对正式科研结论，不把未核验的 skill 输出当成最终事实；统计、图、引用都要留下可复现证据。

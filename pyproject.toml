@@ -17,6 +17,7 @@ dependencies = [
 
 [tool.research-skills-kit]
 skill_paths = [
+  "skills/research-upstream-router",
   "skills/research-eda",
   "skills/research-statistics",
   "skills/research-power",
@@ -24,4 +25,3 @@ skill_paths = [
   "skills/research-citation-check",
   "skills/research-results-audit",
 ]
-
